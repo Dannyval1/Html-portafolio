@@ -131,53 +131,6 @@ a.nav-link:hover:after {
   margin-top: 12px;
 }
 
-.btn-portfolio {
-  text-align: center;
-  display: inline-block;
-  margin: 0 auto;
-  width: 155px;
-  border: 1px solid black;
-  color: white;
-  background-color: black;
-  position: absolute;
-  font-size: 25px;
-  top: 50%;
-  left: 45%;
-  right: 50%;
-  padding: 8px;
-  border-radius: 15px;
-}
-
-.btn-portfolio:hover {
-  color: black;
-  background-color: white;
-  transition: 0.3s;
-}
-
-#contenido {
-  width: 100%;
-  margin-bottom: 50px;
-  grid-area: contenido;
-  display: grid;
-  align-items: center;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  grid-column-gap: 15px;
-  grid-row-gap: 10px;
-  margin-top: 45px;
-}
-
-#publicidad {
-  grid-area: publicidad;
-}
-
-.full-content {
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-  grid-template-areas: "contenido publicidad";
-  grid-column-gap: 15px;
-}
-
 .text-center {
   text-align: center;
 }
@@ -210,14 +163,6 @@ a {
 .main-title {
   color: #1767c3;
   font-size: 35px;
-}
-
-.mt-3 {
-  margin-top: 25px;
-}
-
-.mb-3 {
-  margin-bottom: 25px;
 }
 
 .img-proyects {
@@ -346,21 +291,20 @@ textarea {
   margin-top: 100px;
 }
 
-.title-section-one {
-  font-size: 35px;
-  font-family: "Nunito", sans-serif;
-  font-weight: 800;
-  letter-spacing: 1.03px;
-  line-height: 40px;
-  margin-bottom: 5px;
-}
-
-.subtitle-section-one {
+.subtitle-section-one, .title-section-one {
   font-size: 21px;
   letter-spacing: 0.97px;
   line-height: 29.82px;
   font-family: "Nunito", sans-serif;
   font-weight: 400;
+}
+
+.title-section-one {
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: 1.03px;
+  line-height: 40px;
+  margin-bottom: 5px;
 }
 
 .general-content {
@@ -411,15 +355,88 @@ textarea {
   text-align: center;
 }
 
+.content-social-bar {
+  position: fixed;
+  z-index: 30;
+  top: 45%;
+  bottom: 50%;
+  right: 0%;
+  display: block;
+}
+
+.content-social-bar .redes {
+  bottom: 50%;
+  right: .5%;
+  display: block;
+  background-color: #fff;
+  color: #fff;
+  background-repeat: no-repeat;
+  line-height: 16px;
+  z-index: 999;
+  width: 30px;
+  height: 30px;
+}
+
+.content-social-bar .fb {
+  background-image: url(./../images/face_color.png);
+  background-position: center;
+  padding: 20px;
+  border-bottom: 1px solid #D8DFE5;
+  border-left: 1px solid #D8DFE5;
+  border-top: 1px solid #D8DFE5;
+  border-radius: 10px 0 0;
+}
+
+.content-social-bar .fb:hover {
+  transition: .2s;
+  background-color: #1a77f2;
+  background-image: url(./../images/face_blanco.png);
+}
+
+.content-social-bar .ins {
+  background-image: url(./../images/insta_color.png);
+  background-position: center;
+  border-bottom: 1px solid #D8DFE5;
+  border-left: 1px solid #D8DFE5;
+  padding: 20px;
+}
+
+.content-social-bar .ins:hover {
+  transition: .2s;
+  background-color: #9036b0;
+  background-image: url(./../images/insta_blanco.png);
+}
+
+.content-social-bar .twit {
+  background-image: url(./../images/twitter_color.png);
+  background-position: center;
+  padding: 20px;
+  border-bottom: 1px solid #D8DFE5;
+  border-left: 1px solid #D8DFE5;
+}
+
+.content-social-bar .twit:hover {
+  transition: .2s;
+  background-color: #1ea1f1;
+  background-image: url(./../images/twitter_blanco.png);
+}
+
+.content-social-bar .linkedin {
+  background-image: url(./../images/linkedin_color.png);
+  background-position: center;
+  padding: 20px;
+  border-radius: 0 0 0 10px;
+  border-bottom: 1px solid #D8DFE5;
+  border-left: 1px solid #D8DFE5;
+}
+
+.content-social-bar .linkedin:hover {
+  transition: .2s;
+  background-color: #0b60b8;
+  background-image: url(./../images/linkedin_blanco.png);
+}
+
 @media screen and (max-width: 767px) {
-  .full-content {
-    grid-template-columns: auto;
-    grid-template-areas: "contenido" "publicidad";
-  }
-  #contenido {
-    grid-template-columns: auto;
-    grid-template-areas: "firs-content" "second-content";
-  }
   .btn-portfolio {
     display: none;
   }
